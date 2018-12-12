@@ -53,7 +53,7 @@ div {
       </v-hover>
       <v-spacer></v-spacer>
       <v-toolbar-title :class="color_text" class="font-weight-bold">
-        SUPROHOSTING
+        SURPOHOSTING
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -91,7 +91,7 @@ export default {
   data() {
     return {
       src_logo:
-        "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/hagb-logo2.png",
+        "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/bfXA-ADC%20A+.2-06.png",
       offsetTop: 0,
       color_toolbar: "rgba(255, 255, 255, 0.1)",
       color_text: "white--text",

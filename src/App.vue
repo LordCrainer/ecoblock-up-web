@@ -35,24 +35,10 @@ export default {
   },
   data() {
     return {
-      rutas: [
-        "/",
-        "/clientes",
-        "/hosting",
-        "/dominio",
-        "/hosting/hosting_starter",
-        "/contacto"
-      ],
-      menu_page: [
-        "PRINCIPAL",
-        "CLIENTES",
-        "HOSTING",
-        "DOMINIO",
-        "NOSOTROS",
-        "CONTACTO"
-      ],
-      rutaActual: "",
-      rutaInicio: [
+      rutas: ["/", "/cursos", "/blog", "/nosotros", "/contacto"],
+      menu_page: ["INICIO", "CURSOS", "BLOG", "NOSOTROS", "CONTACTO"],
+      rutaActual: ""
+      /*rutaInicio: [
         {
           ruta: "/",
           nombre: "Principal"
@@ -87,7 +73,7 @@ export default {
           ruta: "/contacto",
           nombre: "CONTACTO"
         }
-      ]
+      ]*/
     };
   },
   created() {
