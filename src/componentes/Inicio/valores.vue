@@ -37,9 +37,9 @@
                 <v-container>
                   <v-layout align-center justify-center row fill-height>
                     <v-card
-                      height="280"
-                      width="280"
-                      style="min-width:250px; border-radius: 10%"
+                      height="300"
+                      width="300"
+                      style="min-width:250px; border-radius: 50%"
                       class="black--text"
                       color="rgba(255,255,255,0.9)"
                       hover
@@ -52,6 +52,7 @@
                           }"
                           :class="`elevation-${hover ? 10 : 2}`"
                           size="100"
+                          color="white"
                         >
                           <img :src="valor.src_avatar" alt="avatar" @click="" />
                         </v-avatar>
@@ -85,7 +86,7 @@ export default {
           text:
             "Cada curso se aplica una combinación de estrategias didácticas para acoplarnos al educando",
           src_avatar:
-            "https://errorlogz.com/wp-content/uploads/2016/05/global.logo_.png"
+            "https://www.cife.edu.mx/assets/media/pasos/evaluacion.svg"
         },
         {
           titulo: "Cuentas de correo Coorporativo",
