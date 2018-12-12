@@ -81,9 +81,9 @@ export default {
     return {
       valores: [
         {
-          titulo: "Panel de control cPanel",
+          titulo: "Estrategias Metodológicas",
           text:
-            "Cada plan cuenta con unos de los mejores paneles para la gestión de tu hosting, de manera sencilla e intuitiva",
+            "Cada curso se aplica una combinación de estrategias didácticas para acoplarnos al educando",
           src_avatar:
             "https://errorlogz.com/wp-content/uploads/2016/05/global.logo_.png"
         },
