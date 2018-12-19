@@ -16,11 +16,13 @@
       class="border_hover"
       v-for="(menu, index) in items"
       :key="index"
-      @click="nombreRuta(path[index]);"
-      :to="path[index]"
+      @click="nombreRuta(menu.ruta);"
+      :to="menu.ruta"
       ripple
     >
-      <v-list-tile-title>{{ menu }}</v-list-tile-title>
+      <v-list-tile-title class="font-weight-bolder">
+        <h3>{{ menu.nombre }}</h3></v-list-tile-title
+      >
     </v-list-tile>
   </v-list>
 </template>

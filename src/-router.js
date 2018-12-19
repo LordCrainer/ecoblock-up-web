@@ -6,10 +6,9 @@ import Router from "vue-router";
 import Header from "./componentes/header.vue";
 import Footer from "./componentes/footer.vue";*/
 import Error404 from "./componentes/error404.vue";
-import Parallax from "./componentes/UI/parallax.vue";
 import Pagina_Inicio from "./componentes/Inicio/inicio.vue";
 import Carousel from "./componentes/Inicio/carusel.vue";
-import Hosting from "./componentes/Hosting/hostings.vue";
+import Cursos from "./componentes/Cursos/cursos.vue";
 import Contact from "./componentes/Contact/contact.vue";
 
 Vue.use(Router);
@@ -31,7 +30,7 @@ export default new Router({
     {
       name: "CURSOS",
       path: "/cursos",
-      components: { default: Hosting }
+      components: { default: Cursos }
     },
     {
       name: "CONTACTO",

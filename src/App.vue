@@ -1,22 +1,25 @@
 <template>
-  <div style="background-color: rgba(25,25,25,0); min-width:250px;">
+  <v-app style="background-color: transparent; margin:0px;  min-width:250px;">
     <!-- HEADER -->
     <!--
       Tiene 2 parámetros y 1 función que recoge el dato que emitió un hijo
     -->
-    <Headerw :menu="menu_page" :rutas="rutas"></Headerw>
+    <Headerw :menus="menu_principal"></Headerw>
     <!-- Carousel -->
     <!-- Solo se renderiza el archivo que tiene dicho nombre -->
     <router-view name="carousel"></router-view>
     <!-- Solo se renderiza el archivo que tiene dicho nombre -->
     <!-- Efecto que se agrega en cada ruta -->
-    <Parallax :item="rutaActual"></Parallax>
+    <Parallax
+      :item="rutaActual"
+      srcImagen="https://www.tendencias.kpmg.es/wp-content/uploads/2018/05/GettyImages-672310452-e1525335107388.jpg"
+    ></Parallax>
     <!-- Se encuentra la sección donde estarán las demás páginas -->
-    <v-app style="background-color: transparent; margin:0px;">
-      <router-view @epath="nombreRuta($event);"></router-view>
-    </v-app>
-    <FooterW></FooterW>
-  </div>
+
+    <router-view @epath="nombreRuta($event);"></router-view>
+
+    <FooterW :menus="menu_principal"></FooterW>
+  </v-app>
 </template>
 
 <script>
@@ -35,43 +38,27 @@ export default {
   },
   data() {
     return {
-      rutas: ["/", "/cursos", "/blog", "/nosotros", "/contacto"],
-      menu_page: ["PRINCIPAL", "CURSOS", "BLOG", "NOSOTROS", "CONTACTO"],
       rutaActual: "",
-      rutaInicio: [
+      menu_principal: [
         {
           ruta: "/",
-          nombre: "Principal"
+          nombre: "Inicio"
         },
         {
-          ruta: "/clientes",
-          nombre: "CLIENTES"
+          ruta: "/cursos",
+          nombre: "Cursos"
         },
         {
-          ruta: "/clientes",
-          nombre: "HOSTING",
-          children: [
-            {
-              ruta: "/hosting_starter",
-              nombre: "HOSTING STARTER"
-            },
-            {
-              ruta: "/hosting_enterprise",
-              nombre: "HOSTING ENTERPRISE"
-            }
-          ]
-        },
-        {
-          ruta: "/dominio",
-          nombre: "DOMINIO"
+          ruta: "/blog",
+          nombre: "Blog"
         },
         {
           ruta: "/nosotros",
-          nombre: "NOSOTROS"
+          nombre: "Nosotros"
         },
         {
           ruta: "/contacto",
-          nombre: "CONTACTO"
+          nombre: "Contacto"
         }
       ]
     };

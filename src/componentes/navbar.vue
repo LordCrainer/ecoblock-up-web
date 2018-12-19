@@ -1,25 +1,32 @@
 <template>
-  <v-tabs slot="extension" v-model="tab" color="transparent">
-    <v-tabs-slider :color="clases"></v-tabs-slider>
+  <v-tabs slot="extension" v-model="tab" color="transparent" grow>
+    <v-tabs-slider
+      style="border: 2px solid black;"
+      :color="clases.split('--')[0]"
+    ></v-tabs-slider>
     <v-tab
-      style="font-size: 17px;"
-      v-for="(menu, ind_menu) in menus"
-      :key="menu"
-      @click="nombreRuta(path[ind_menu]);"
-      :to="path[ind_menu]"
+      style="font-size: 13px;"
+      v-for="menu in menus"
+      :key="menu.nombre"
+      @click="nombreRuta(menu.ruta);"
+      :to="menu.ruta"
       class="font-weight-black "
       :class="clases"
     >
-      {{ menu }}
+      {{ menu.nombre }}
     </v-tab>
   </v-tabs>
 </template>
 
 <script>
 export default {
-  props: ["menus", "color", "path", "clases"],
+  props: ["menus", "color", "clases"],
   data() {
     return {
+      show: false,
+      //item.items == undefined || item.items.length == 0
+      //    ? ''
+      //    : 'keyboard_arrow_down'
       tab: null
     };
   },

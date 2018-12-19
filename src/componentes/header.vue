@@ -1,26 +1,22 @@
 <style scoped>
-div {
-  font-family: "Righteous", cursive;
-  font-size: 22px;
-}
 #list {
   background-color: rgba(255, 255, 255, 0.95);
 }
 </style>
 
 <template>
-  <div v-scroll="onScroll">
+  <nav v-scroll="onScroll">
     <v-navigation-drawer
       id="list"
+      app
       temporary
       hide-overlay
       fixed
       disable-resize-watcher
       v-model="drawer_flag"
       right
-      app
     >
-      <List :items="menu" :path="rutas" @epath="nombreRuta($event);"></List>
+      <List :items="menus" @epath="nombreRuta($event);"></List>
       <v-btn
         fixed
         bottom
@@ -36,28 +32,32 @@ div {
     <v-toolbar
       app
       fixed
-      :style="{ height: height_toolbar }"
-      class="elevation-8"
+      :dark="offsetTop < 30 ? true : false"
+      class="elevation-8 "
       :color="color_toolbar"
     >
-      <v-toolbar-side-icon fab flat dark :ripple="false">
-        <v-avatar color="transparent" size="55">
-          <img :src="src_logo" alt="alt" /> </v-avatar
-      ></v-toolbar-side-icon>
+      <router-link to="/">
+        <img :src="src_logo" alt="alt" width="70px" height="70px" />
+      </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-title
         :class="color_text"
         class="font-weight-black"
-        style="font-size: 26px;"
+        style="font-size: 30px;"
       >
         ADCAPLUS
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
+        <!--
+          <v-btn flat v-for="menu in menus" :key="menu.nombre">{{
+            menu.nombre
+          }}</v-btn>
+        -->
+
         <Navbar
           @epath="nombreRuta($event);"
-          :menus="menu"
-          :path="rutas"
+          :menus="menus"
           :clases="color_text"
         ></Navbar>
       </v-toolbar-items>
@@ -71,7 +71,7 @@ div {
         <v-icon large>more_vert</v-icon>
       </v-btn>
     </v-toolbar>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -80,7 +80,7 @@ import List from "./UI/list.vue";
 //import pdfvue from "./inicio/pdf.vue";
 //import PDF from "jspdf";
 export default {
-  props: ["menu", "rutas"],
+  props: ["menus"],
   components: {
     Navbar,
     List
@@ -106,11 +106,11 @@ export default {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
       if (this.offsetTop > 30) {
         this.color_toolbar = "rgba(255, 255, 255, 0.9)";
-        this.height_toolbar = "65px";
+        this.height_toolbar = "70px";
         this.color_text = "black--text";
       } else {
         this.color_toolbar = "rgba(50, 50, 50, 0.8)";
-        this.height_toolbar = "68px";
+        this.height_toolbar = "70px";
         this.color_text = "white--text";
       }
     },

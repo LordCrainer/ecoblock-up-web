@@ -2,7 +2,10 @@
 https://www.w3.org/TR/html/sec-forms.html#email-state-typeemail <style></style>
 
 <template>
-  <v-layout> <slot></slot> <contactoForm></contactoForm> </v-layout>
+  <v-container>
+    <v-layout justify-center align-center>
+      <slot></slot> <contactoForm></contactoForm> </v-layout
+  ></v-container>
 </template>
 
 <script>

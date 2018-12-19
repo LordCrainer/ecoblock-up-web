@@ -1,9 +1,10 @@
 <template>
   <v-footer dark height="auto">
     <v-card
+      width="100%"
       flat
       tile
-      color="rgba(0, 25, 100, 1)"
+      color="rgb(16, 60, 145)"
       class="white--text text-xs-center"
     >
       <v-card-text>
@@ -12,18 +13,49 @@
         </v-btn>
       </v-card-text>
 
-      <v-card-text class="white--text pt-0"> {{ text }} </v-card-text>
+      <v-card-text class="white--text pt-0">
+        <v-container grid-list-xl>
+          <v-layout justify-space-around align-center>
+            <v-flex xs12 sm4>
+              <v-layout column justify-center align-center>
+                <h3>PRINCIPAL</h3>
+                <router-link
+                  v-for="menu in menus"
+                  :key="menu.nombre"
+                  :to="menu.ruta"
+                >
+                  <v-btn flat round class="my-0">{{ menu.nombre }} </v-btn>
+                </router-link>
+              </v-layout>
+            </v-flex>
+            <v-flex xs12 sm4>
+              <v-layout column justify-center align-center>
+                <h3>SERVICIOS</h3>
+                <router-link
+                  v-for="menu in menus"
+                  :key="menu.nombre"
+                  style="text-decoration: none;"
+                  :to="menu.ruta"
+                >
+                  <v-btn flat round class="my-0">{{ menu.nombre }} </v-btn>
+                </router-link>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        &copy;2018 — <strong>Suprohosting</strong>
+        &copy;2018 — <strong>ADCAPLUS</strong>
       </v-card-text>
     </v-card>
   </v-footer>
 </template>
 <script>
 export default {
+  props: ["menus"],
   data() {
     return {
       icons: [

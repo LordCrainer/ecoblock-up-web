@@ -1,8 +1,5 @@
 <template>
-  <v-parallax
-    src="http://thetanjungpuratimes.com/file/2016/02/Symphony-Square-Abstract-Background-Vector.jpg"
-    height="350"
-  >
+  <v-parallax :src="srcImagen" height="350">
     <v-layout align-center justify-center>
       <div>
         <h1
@@ -17,6 +14,6 @@
 </template>
 <script>
 export default {
-  props: ["item"]
+  props: ["item", "srcImagen"]
 };
 </script>
