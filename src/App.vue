@@ -3,7 +3,7 @@
     <Headerw :menus="menu_principal"></Headerw>
     <section>
       <Parallax
-        height="400"
+        height="550"
         srcImagen="https://ren.org.ni/wp-content/uploads/2016/07/Orange-Abstract-Computer-Backgrounds-HD.jpg"
       >
         <v-container>
@@ -13,8 +13,8 @@
                 <v-img
                   contain
                   src="https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png"
-                  aspect-ratio="5"
-                  height="40%"
+                  aspect-ratio="4"
+                  height="50%"
                 ></v-img>
               </router-link>
               <v-card-title class="font-weight-bold display-2 white--text">
@@ -97,10 +97,10 @@ body {
   background: #949c4e;
   background: linear-gradient(
     135deg,
-    rgba(0, 25, 100, 1) 25%,
-    rgba(75, 150, 225, 1) 25%,
-    rgba(75, 150, 225, 1) 60%,
-    rgba(0, 25, 100, 1) 60%
+    rgb(237, 109, 50) 15%,
+    rgb(255, 80, 0) 15%,
+    rgb(255, 80, 0) 85%,
+    rgb(237, 109, 50) 85%
   );
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,

@@ -18,26 +18,15 @@
   <v-carousel>
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
       <!--
-        <v-container fill-height grid-list-xl>
-          <v-layout align-center justify-center row>
-            <v-flex md6 sm6 xs12>
-              <v-card color="rgba(102, 102, 102, 0.9)">
+        <v-container fill-height fluid grid-list-xl>
+          <v-layout align-start justify-center row>
+            <v-flex  sm12 xs12>
+              <v-card color="rgba(255, 255, 255, 0.5)" >
                 <v-card-text class="text-xs-center">
-                  <span class="display-1 white--text  font-weight-black">{{
+                  <span class="display-1 black--text  font-weight-black">{{
                     item.text
                   }}</span>
                 </v-card-text>
-
-                <v-container fill-height>
-                  <v-layout row align-center justify-center>
-                    <v-flex>
-                      <v-btn round color="primary" dark>ENTRAR</v-btn>
-                    </v-flex>
-                    <v-flex>
-                      <v-btn round outline color="white " dark>Servicios </v-btn>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
               </v-card>
             </v-flex>
           </v-layout>
@@ -56,18 +45,19 @@ export default {
       //class="v-btn v-btn--active v-btn--icon v-btn--small theme--dark v-carousel__controls__item"
       items: [
         {
-          text: "TRABAJO EN EQUIPO",
+          text: "CASA ARMADA",
           src:
-            "https://www.efeblog.com/wp-content/uploads/2018/05/trabajo-en-equipo.jpg"
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/Hhqk-OBRAS_CASA.jpg"
         },
         {
-          text: "APRENDIZAJE",
-          src: "http://www.yeahiptv.com/uploads/contact-us.jpeg"
+          text: "CERRAMIENTO",
+          src:
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/0QjY-OBRAS_CERRADURA.jpg"
         },
         {
-          text: "DESARROLLO",
+          text: "ARMADO",
           src:
-            "https://whitepapers.em360tech.com/wp-content/uploads/Nvidia-Telco.jpeg"
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/cVlw-OBRAS_REFORZAMIENTO.jpg"
         }
       ]
     };

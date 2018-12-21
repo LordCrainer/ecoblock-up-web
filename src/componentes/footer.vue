@@ -4,7 +4,7 @@
       width="100%"
       flat
       tile
-      color="rgb(16, 60, 145)"
+      color="rgb(225, 80, 0)"
       class="white--text text-xs-center"
     >
       <v-card-text>
@@ -12,10 +12,21 @@
           <v-icon size="24px">{{ icon }}</v-icon>
         </v-btn>
       </v-card-text>
-
       <v-card-text class="white--text pt-0">
         <v-container grid-list-xl>
-          <v-layout justify-space-around align-center>
+          <v-layout justify-space-around align-start>
+            <v-flex xs12 sm4>
+              <v-layout column justify-center align-center>
+                <h3>EMPRESA</h3>
+                <router-link
+                  v-for="menu in link_empresa"
+                  :key="menu.nombre"
+                  :to="menu.ruta"
+                >
+                  <v-btn flat round class="my-0">{{ menu.nombre }} </v-btn>
+                </router-link>
+              </v-layout>
+            </v-flex>
             <v-flex xs12 sm4>
               <v-layout column justify-center align-center>
                 <h3>PRINCIPAL</h3>
@@ -35,7 +46,13 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        &copy;2018 — <strong>ADCAPLUS</strong>
+        &copy;2018 —
+        <a
+          style="text-decoration: none;"
+          class="white--text"
+          href="adcaplus.com"
+          ><strong>ADCAPLUS</strong></a
+        >
       </v-card-text>
     </v-card>
   </v-footer>
@@ -45,6 +62,11 @@ export default {
   props: ["menus"],
   data() {
     return {
+      titulo: ["EMPRESA", "PRINCIPAL"],
+      link_empresa: [
+        { ruta: "/nosotros", nombre: "Misión" },
+        { ruta: "/nosotros", nombre: "Visión" }
+      ],
       icons: [
         "fab facebook-square",
         "fab fa-twitter",

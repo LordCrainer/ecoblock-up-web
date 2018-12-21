@@ -16,18 +16,15 @@ export default {
     return {
       datos: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
           titulo: "Aprende, Desarrolla y Capacita",
           text: "Son 3 acciones que cada persona debería de hacer"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
           titulo: "Aprende y Crea para el Futuro",
           text:
             "Adquiere conocimientos, desarróllalo y construye un mundo mejor"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
           titulo: "El conocimiento se vuelve ineficaz sino se lo aplica",
           text: ""
         }
@@ -42,10 +39,10 @@ export default {
   background: #949c4e;
   background: linear-gradient(
     135deg,
-    rgba(248, 172, 0, 1) 15%,
-    rgba(16, 60, 145, 1) 15%,
-    rgba(16, 90, 185, 1) 85%,
-    rgba(248, 172, 0, 1) 85%
+    rgb(237, 109, 50) 5%,
+    rgb(225, 80, 0) 15%,
+    rgb(225, 80, 0) 75%,
+    rgb(237, 109, 50) 85%
   );
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,

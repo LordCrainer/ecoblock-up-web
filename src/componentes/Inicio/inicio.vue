@@ -1,28 +1,30 @@
 <template>
   <div>
-    <slot></slot>
+    <slot></slot> <Productos></Productos>
+    <Parallax
+      srcImagen="https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/zsvi-4eea78_IMG_20180910_144303278_HDR.jpg"
+    ></Parallax>
+    <Ventajas> </Ventajas>
 
-    <Parallax
-      srcImagen="https://www.tendencias.kpmg.es/wp-content/uploads/2018/05/GettyImages-672310452-e1525335107388.jpg"
-    ></Parallax>
-    <Ventajas> </Ventajas> <Comentarios></Comentarios>
-    <Parallax
-      srcImagen="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/YqGSkmb/plexus-fantasy-abstract-technology-and-engineering-background-with-original-organic-motion_eqy4lpzde__F0012.png"
-    ></Parallax>
+    <Carousel></Carousel> <Comentarios></Comentarios>
   </div>
 </template>
 <script>
 import Jumbo from "./jumbotron.vue";
+import Productos from "./productos.vue";
 import Ventajas from "./ventajas.vue";
 import Comentarios from "./comentarios.vue";
 import Parallax from "./../UI/parallax.vue";
+import Carousel from "./carusel.vue";
 
 export default {
   components: {
     Jumbo,
     Ventajas,
     Comentarios,
-    Parallax
+    Parallax,
+    Carousel,
+    Productos
   },
   data() {
     return {};

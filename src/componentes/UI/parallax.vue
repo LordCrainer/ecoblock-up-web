@@ -21,12 +21,12 @@ export default {
     };
   },
   created() {
-    this.comparar(this.item);
+    this.comparar();
   },
   methods: {
-    comparar(item) {
+    comparar() {
       if (this.item !== undefined) {
-        if (item !== "INICIO" && item !== "/") {
+        if (this.item !== "INICIO" && this.item !== "/") {
           this.altura = 400;
           return true;
         } else {
