@@ -1,7 +1,28 @@
 <template>
   <v-app style="background-color: transparent; margin:0px;  min-width:250px;">
     <Headerw :menus="menu_principal"></Headerw>
-    <section></section>
+    <section>
+      <Parallax
+        height="400"
+        srcImagen="https://ren.org.ni/wp-content/uploads/2016/07/Orange-Abstract-Computer-Backgrounds-HD.jpg"
+      >
+        <v-container>
+          <v-layout justify-center>
+            <v-card flat color="rgba(255,255,255,0)">
+              <v-img
+                contain
+                src="https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png"
+                aspect-ratio="5"
+                height="40%"
+              ></v-img>
+              <v-card-title class="font-weight-bold display-2 white--text">
+                <h4>LADRILLO DE LA DIFERENCIA</h4>
+              </v-card-title></v-card
+            ></v-layout
+          >
+        </v-container>
+      </Parallax>
+    </section>
     <section><router-view @epath="nombreRuta($event);"></router-view></section>
     <FooterW :menus="menu_principal"></FooterW>
   </v-app>
@@ -33,12 +54,8 @@ export default {
           nombre: "Inicio"
         },
         {
-          ruta: "/cursos",
-          nombre: "Cursos"
-        },
-        {
-          ruta: "/blog",
-          nombre: "Blog"
+          ruta: "/productos",
+          nombre: "productos"
         },
         {
           ruta: "/nosotros",

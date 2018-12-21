@@ -26,8 +26,8 @@ export default new Router({
       }
     },
     {
-      name: "CURSOS",
-      path: "/cursos",
+      name: "PRODUCTOS",
+      path: "/productos",
       components: { default: Cursos }
     },
     {
