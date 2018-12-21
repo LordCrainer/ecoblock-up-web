@@ -92,10 +92,10 @@ export default {
           text:
             "Cada curso se aplica una combinación de estrategias didácticas para acoplarnos al educando",
           src_avatar:
-            "https://cdn4.iconfinder.com/data/icons/business-vol-5/100/Artboard_16-512.png"
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/8m9M-RAPIDO.png"
         },
         {
-          titulo: "AMIGABLE CON EL AMBIENTE",
+          titulo: "RESISTENTE",
           text:
             "Enfatizamos el trabajo en equipo al formar pequeños grupos en cada capacitación",
           src_avatar:
@@ -111,14 +111,14 @@ export default {
           text:
             "Usamos diferentes herramientas para que el desarrollo de las clases y la comunicación se logre de manera efectiva",
           src_avatar:
-            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/aJW_-Earth_eco_ecology_globe_planet_protect-512.png"
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/f5vf-Earth_eco_ecology_globe_planet_protect-512.png"
         },
         {
-          titulo: "RESISTENTE Y MODULAR",
+          titulo: "MODULAR",
           text:
             "Mostramos un fuerte desarrollo académico, día a día buscamnos nuevas formas de enseñanza",
           src_avatar:
-            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/z8VE-building_blocks_toy_lego_construction_cube-512.png"
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/6jjs-building_blocks_toy_lego_construction_cube-512.png"
         },
         {
           titulo: "NO NECESITA HORNOS",
