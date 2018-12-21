@@ -3,7 +3,6 @@
     <slot></slot>
 
     <Parallax
-      :item="rutaActual"
       srcImagen="https://www.tendencias.kpmg.es/wp-content/uploads/2018/05/GettyImages-672310452-e1525335107388.jpg"
     ></Parallax>
     <Ventajas> </Ventajas> <Comentarios></Comentarios>

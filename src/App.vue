@@ -9,12 +9,14 @@
         <v-container>
           <v-layout justify-center>
             <v-card flat color="rgba(255,255,255,0)">
-              <v-img
-                contain
-                src="https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png"
-                aspect-ratio="5"
-                height="40%"
-              ></v-img>
+              <router-link to="/">
+                <v-img
+                  contain
+                  src="https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png"
+                  aspect-ratio="5"
+                  height="40%"
+                ></v-img>
+              </router-link>
               <v-card-title class="font-weight-bold display-2 white--text">
                 <h4>LADRILLO DE LA DIFERENCIA</h4>
               </v-card-title></v-card
