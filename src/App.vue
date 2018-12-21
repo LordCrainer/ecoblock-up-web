@@ -1,23 +1,8 @@
 <template>
   <v-app style="background-color: transparent; margin:0px;  min-width:250px;">
-    <!-- HEADER -->
-    <!--
-      Tiene 2 parámetros y 1 función que recoge el dato que emitió un hijo
-    -->
     <Headerw :menus="menu_principal"></Headerw>
-    <!-- Carousel -->
-    <!-- Solo se renderiza el archivo que tiene dicho nombre -->
-    <router-view name="carousel"></router-view>
-    <!-- Solo se renderiza el archivo que tiene dicho nombre -->
-    <!-- Efecto que se agrega en cada ruta -->
-    <Parallax
-      :item="rutaActual"
-      srcImagen="https://www.tendencias.kpmg.es/wp-content/uploads/2018/05/GettyImages-672310452-e1525335107388.jpg"
-    ></Parallax>
-    <!-- Se encuentra la sección donde estarán las demás páginas -->
-
-    <router-view @epath="nombreRuta($event);"></router-view>
-
+    <section></section>
+    <section><router-view @epath="nombreRuta($event);"></router-view></section>
     <FooterW :menus="menu_principal"></FooterW>
   </v-app>
 </template>
@@ -26,15 +11,18 @@
 import Headerw from "./componentes/header.vue";
 import FooterW from "./componentes/footer.vue";
 import Parallax from "./componentes/UI/parallax.vue";
+import Jumbo from "./componentes/Inicio/jumbotron.vue";
 //import Carusel from "./componentes/Inicio/carusel.vue";
 //import Hosting from "./componentes/hosting/hostings.vue";
 //import datePicker from "./componentes/date-picker.vue";
 //import subtab from "./componentes/subtab.vue";
+//https://ren.org.ni/wp-content/uploads/2016/07/Orange-Abstract-Computer-Backgrounds-HD.jpg
 export default {
   components: {
     Headerw,
     FooterW,
-    Parallax
+    Parallax,
+    Jumbo
   },
   data() {
     return {

@@ -7,7 +7,6 @@ import Header from "./componentes/header.vue";
 import Footer from "./componentes/footer.vue";*/
 import Error404 from "./componentes/error404.vue";
 import Pagina_Inicio from "./componentes/Inicio/inicio.vue";
-import Carousel from "./componentes/Inicio/carusel.vue";
 import Cursos from "./componentes/Cursos/cursos.vue";
 import Contact from "./componentes/Contact/contact.vue";
 
@@ -23,8 +22,7 @@ export default new Router({
       name: "INICIO",
       path: "/",
       components: {
-        default: Pagina_Inicio,
-        carousel: Carousel
+        default: Pagina_Inicio
       }
     },
     {

@@ -28,19 +28,6 @@
                 </router-link>
               </v-layout>
             </v-flex>
-            <v-flex xs12 sm4>
-              <v-layout column justify-center align-center>
-                <h3>SERVICIOS</h3>
-                <router-link
-                  v-for="menu in menus"
-                  :key="menu.nombre"
-                  style="text-decoration: none;"
-                  :to="menu.ruta"
-                >
-                  <v-btn flat round class="my-0">{{ menu.nombre }} </v-btn>
-                </router-link>
-              </v-layout>
-            </v-flex>
           </v-layout>
         </v-container>
       </v-card-text>

@@ -37,7 +37,7 @@
       :color="color_toolbar"
     >
       <router-link to="/">
-        <img :src="src_logo" alt="alt" width="70px" height="70px" />
+        <img :src="src_logo" alt="alt" width="50px" height="50px" />
       </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-title
@@ -49,17 +49,17 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <!--
-          <v-btn flat v-for="menu in menus" :key="menu.nombre">{{
-            menu.nombre
-          }}</v-btn>
-        -->
-
-        <Navbar
-          @epath="nombreRuta($event);"
-          :menus="menus"
-          :clases="color_text"
-        ></Navbar>
+        <v-btn
+          id="botonBar"
+          flat
+          v-for="menu in menus"
+          :key="menu.nombre"
+          :to="menu.ruta"
+          class="font-weight-black caption"
+          :color="color_text.split('--')[0]"
+        >
+          {{ menu.nombre }}
+        </v-btn>
       </v-toolbar-items>
       <v-btn
         flat
@@ -88,9 +88,9 @@ export default {
   data() {
     return {
       src_logo:
-        "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/3C31-logo3.png",
+        "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png",
       offsetTop: 0,
-      color_toolbar: "rgba(50, 50, 50, 0.8)",
+      color_toolbar: "rgba(214, 83, 24, 0.75)",
       color_text: "white--text",
       height_toolbar: "70px",
       drawer_flag: false,
@@ -105,11 +105,11 @@ export default {
     onScroll(e) {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
       if (this.offsetTop > 30) {
-        this.color_toolbar = "rgba(255, 255, 255, 0.9)";
+        this.color_toolbar = "rgba(240, 145, 2, 0.9)";
         this.height_toolbar = "70px";
-        this.color_text = "black--text";
+        this.color_text = "white--text";
       } else {
-        this.color_toolbar = "rgba(50, 50, 50, 0.8)";
+        this.color_toolbar = "rgba(214, 83, 24, 0.75)";
         this.height_toolbar = "70px";
         this.color_text = "white--text";
       }
