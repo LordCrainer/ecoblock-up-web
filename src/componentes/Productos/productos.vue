@@ -7,7 +7,7 @@
             <v-flex xs6 right>
               <v-text-field
                 prepend-icon="search"
-                label="Buscar Curso"
+                label="Buscar producto"
                 v-model="buscar"
               ></v-text-field>
             </v-flex>
@@ -29,11 +29,11 @@ export default {
       buscar: "",
       data: [
         {
-          Nombre: "Introducción a Arduino",
-          Precio: 60,
-          Descripcion: "Crea prototipos electrónicos de manera sencilla",
+          Nombre: "LADRILLO CREP",
+          Precio: 0.4,
+          Descripcion: "Estructural y para levantamiento de paredes",
           src_imagen:
-            "https://fabricadigital.org/wp-content/uploads/arduinouno_back_1.jpg",
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/em4f-PRODUCTO_BLOQUE_CREP.png",
           categoria: [
             "Sistemas Embebidos",
             "Ingenería",
@@ -43,12 +43,11 @@ export default {
           ]
         },
         {
-          Nombre: "Introducción a Raspberry Pi",
+          Nombre: "LADRILLO VI",
           Precio: 120,
-          Descripcion:
-            "Desarrolla proyectos de mayor alcance usando este miniordenador",
+          Descripcion: "Canaleta",
           src_imagen:
-            "https://upload.wikimedia.org/wikipedia/commons/b/b4/Raspberry_Pi_3_Model_B.png",
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/mLpb-PRODUCTO_BLOQUE_vi.png",
           categoria: [
             "Sistemas Emebebidos",
             "Ingenería",
@@ -60,9 +59,9 @@ export default {
         {
           Nombre: "Desarrollo Web",
           Precio: 120,
-          Descripcion:
-            "Desarrolla tu propia página web y aplicaciones usando el stack MEVN",
-          src_imagen: "https://i.ytimg.com/vi/ARIzrNwA5HQ/maxresdefault.jpg",
+          Descripcion: "Para el piso, con dos tipos, para peatones y vehicular",
+          src_imagen:
+            "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/aEJO-PRODUCTO_ADOQUIN.png",
           categoria: [
             "Desarrollo Web",
             "Javascript",

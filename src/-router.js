@@ -7,7 +7,7 @@ import Header from "./componentes/header.vue";
 import Footer from "./componentes/footer.vue";*/
 import Error404 from "./componentes/error404.vue";
 import Pagina_Inicio from "./componentes/Inicio/inicio.vue";
-import Cursos from "./componentes/Cursos/cursos.vue";
+import Productos from "./componentes/Productos/productos.vue";
 import Contact from "./componentes/Contact/contact.vue";
 
 Vue.use(Router);
@@ -28,7 +28,7 @@ export default new Router({
     {
       name: "PRODUCTOS",
       path: "/productos",
-      components: { default: Cursos }
+      components: { default: Productos }
     },
     {
       name: "CONTACTO",

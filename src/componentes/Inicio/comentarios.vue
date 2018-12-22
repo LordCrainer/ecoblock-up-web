@@ -16,16 +16,15 @@ export default {
     return {
       datos: [
         {
-          titulo: "Aprende, Desarrolla y Capacita",
-          text: "Son 3 acciones que cada persona debería de hacer"
+          titulo: "Construye tu lugar en poco tiempo",
+          text: ""
         },
         {
-          titulo: "Aprende y Crea para el Futuro",
-          text:
-            "Adquiere conocimientos, desarróllalo y construye un mundo mejor"
+          titulo: "Te permite economizar en materiales de construcción",
+          text: ""
         },
         {
-          titulo: "El conocimiento se vuelve ineficaz sino se lo aplica",
+          titulo: "",
           text: ""
         }
       ]

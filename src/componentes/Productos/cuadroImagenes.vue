@@ -14,7 +14,7 @@
             height="350"
             :class="`elevation-${hover ? 10 : 4}`"
           >
-            <v-img contain :aspect-ratio="16 / 9" :src="dato.src_imagen">
+            <v-img contain :aspect-ratio="1.5" :src="dato.src_imagen">
               <v-layout align-center justify-center row>
                 <v-flex xs12>
                   <v-card color="rgba(25, 25, 25, 0.8)">
@@ -30,12 +30,12 @@
               <v-expand-transition>
                 <router-link
                   v-if="hover"
-                  class="d-flex transition-fast-in-fast-out blue lighten-1 v-card--reveal display-3 black--text"
+                  class="d-flex transition-fast-in-fast-out orange lighten-1 v-card--reveal display-3 black--text"
                   style="height: 100%; text-decoration: none;"
                   to="/"
                 >
                   <v-container>
-                    <v-btn icon fab color="yellow"
+                    <v-btn icon dark fab color="black"
                       ><v-icon large>info</v-icon></v-btn
                     ></v-container
                   >
@@ -53,10 +53,8 @@
                 top
                 style="z-index: 0;"
               >
-                <v-icon>school</v-icon>
+                <v-icon large>search</v-icon>
               </v-btn>
-
-              <div></div>
             </v-card-text>
             <v-card-text class="font-weight-light title mb-2 my-2">
               {{ dato.Descripcion }}
