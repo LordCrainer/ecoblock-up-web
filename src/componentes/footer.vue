@@ -45,14 +45,12 @@
       <v-card-text>
         <v-layout row>
           <v-flex>
-            <a
-              style="text-decoration: none;"
-              class="white--text"
-              target="_blank"
-              :href="api"
-            >
-              <v-icon>phone</v-icon>
-              <h3>{{ telefono }}</h3>
+            <a style="text-decoration: none;" class="white--text">
+              <v-btn icon @click.stop.prevent="copyTestingCode">
+                <v-icon large>phone</v-icon></v-btn
+              >
+              <h3 @click.stop.prevent="copyTestingCode">{{ telefono }}</h3>
+              <input type="hidden" id="telefono_copy" :value="telefono" />
             </a>
           </v-flex>
           <v-flex>
@@ -60,7 +58,7 @@
               style="text-decoration: none;"
               class="white--text"
               href="mailto: ${correo}"
-              ><v-icon>mail</v-icon>
+              ><v-btn icon><v-icon large>mail</v-icon></v-btn>
               <h3>{{ correo }}</h3></a
             >
           </v-flex>
@@ -104,6 +102,25 @@ export default {
       text:
         "Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
     };
+  },
+  methods: {
+    copyTestingCode() {
+      let testingCodeToCopy = document.querySelector("#telefono_copy");
+      testingCodeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
+      testingCodeToCopy.select();
+
+      try {
+        var successful = document.execCommand("copy");
+        var msg = successful ? "exitosamente" : "sin exito";
+        alert("El número fue copiado " + msg);
+      } catch (err) {
+        alert("Oops, no se ha podido copiar el número");
+      }
+
+      /* unselect the range */
+      testingCodeToCopy.setAttribute("type", "hidden");
+      window.getSelection().removeAllRanges();
+    }
   }
 };
 </script>
