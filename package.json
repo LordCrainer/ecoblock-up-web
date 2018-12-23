@@ -15,6 +15,7 @@
   "dependencies": {
     "aos": "2.3.4",
     "axios": "latest",
+    "emailjs-com": "2.3.2",
     "vue": "^2.5.2",
     "vue-router": "latest",
     "vuetify": "latest"

@@ -1,6 +1,6 @@
 <template>
   <v-layout align-center justify-center>
-    <v-card style="max-width: 500px;" class="mx-auto ">
+    <v-card style="min-width: 350px; width:500px;" class="mx-auto ">
       <v-form
         ref="form"
         v-model="valid"
@@ -20,23 +20,26 @@
           label="E-mail"
           required
         ></v-text-field>
-        <v-select
-          v-model="select"
-          :items="items"
-          :rules="[v => !!v || 'Item is required']"
-          label="Item"
-          required
-        ></v-select>
+        <!--
+          <v-select
+            v-model="select"
+            :items="items"
+            :rules="[v => !!v || 'Item is required']"
+            label="Item"
+            required
+          ></v-select>
+        -->
 
-        <v-radio-group v-model="radio" row>
-          <v-radio
-            label="Servicio al Cliente"
-            value="Servicio al Cliente"
-          ></v-radio>
-          <v-radio label="Soporte" value="Soporte Técnico"></v-radio>
-          <v-radio label="Cobranza" value="Cobranza"></v-radio>
-        </v-radio-group>
-
+        <!--
+          <v-radio-group v-model="radio" row>
+            <v-radio
+              label="Servicio al Cliente"
+              value="Servicio al Cliente"
+            ></v-radio>
+            <v-radio label="Soporte" value="Soporte Técnico"></v-radio>
+            <v-radio label="Cobranza" value="Cobranza"></v-radio>
+          </v-radio-group>
+        -->
         <v-textarea
           label="Comentario"
           v-model="textArea"
@@ -46,12 +49,14 @@
           rows="3"
           :counter="500"
         ></v-textarea>
-        <v-checkbox
-          v-model="checkbox"
-          :rules="[v => !!v || 'You must agree to continue!']"
-          label="Do you agree?"
-          required
-        ></v-checkbox>
+        <!--
+          <v-checkbox
+            v-model="checkbox"
+            :rules="[v => !!v || 'You must agree to continue!']"
+            label="Do you agree?"
+            required
+          ></v-checkbox>
+        -->
 
         <v-btn :disabled="!valid" @click="submit"> submit </v-btn>
         <v-btn @click="clear">clear</v-btn>
@@ -61,7 +66,7 @@
 </template>
 <script>
 import axios from "axios";
-
+import * as emailjs from "emailjs-com";
 export default {
   data: () => ({
     valid: true,
@@ -83,19 +88,31 @@ export default {
       v => !!v || "Escriba un comentario",
       v => (v && v.length > 1) || "Digite un comentario"
     ],
-    textArea: null
+    textArea: null,
+    user: "user_ANaMPedZDtBmrIV2T25NV",
+    template: "mailRespuesta"
   }),
 
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        emailjs
+          .sendForm("<YOUR SERVICE ID>", this.template, "#myForm", this.user)
+          .then(
+            response => {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            err => {
+              console.log("FAILED...", err);
+            }
+          );
         // Native form submission is not yet supported
-        axios.post("/api/submit", {
+        /*axios.post("/api/submit", {
           name: this.name,
           email: this.email,
           select: this.select,
           checkbox: this.checkbox
-        });
+        });*/
       }
     },
     clear() {

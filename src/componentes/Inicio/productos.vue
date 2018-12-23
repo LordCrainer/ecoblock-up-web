@@ -22,6 +22,7 @@
                     }"
                     :class="`elevation-${hover ? 5 : 0}`"
                     style="border-radius: 5%"
+                    to="/productos"
                   >
                     <img
                       style="max-width: 350px; width: 100%"

@@ -9,7 +9,7 @@ import Error404 from "./componentes/error404.vue";
 import Pagina_Inicio from "./componentes/Inicio/inicio.vue";
 import Productos from "./componentes/Productos/productos.vue";
 import Contact from "./componentes/Contact/contact.vue";
-
+import Nosotros from "./componentes/Nosotros/nosotros.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -35,6 +35,13 @@ export default new Router({
       path: "/contacto",
       components: {
         default: Contact
+      }
+    },
+    {
+      name: "NOSOTROS",
+      path: "/nosotros",
+      components: {
+        default: Nosotros
       }
     },
     {

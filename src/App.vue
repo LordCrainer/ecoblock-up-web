@@ -57,7 +57,7 @@ export default {
         },
         {
           ruta: "/productos",
-          nombre: "productos"
+          nombre: "Productos"
         },
         {
           ruta: "/nosotros",

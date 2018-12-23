@@ -5,31 +5,26 @@
   color: black;
   font-weight: bold;
 }
-.v-list {
-  background-color: rgba(255, 255, 255, 0);
-}
 </style>
 
 <template>
   <v-list dense style="back">
     <v-list-tile
-      class="border_hover"
+      :class="clases"
       v-for="(menu, index) in items"
       :key="index"
       @click="nombreRuta(menu.ruta);"
       :to="menu.ruta"
       ripple
     >
-      <v-list-tile-title class="font-weight-bolder">
-        <h3>{{ menu.nombre }}</h3></v-list-tile-title
-      >
+      <slot name="listName" :data="menu" :index="index"></slot>
     </v-list-tile>
   </v-list>
 </template>
 
 <script>
 export default {
-  props: ["items", "path"],
+  props: ["items", "path", "clases"],
   data() {
     return {
       tab: null

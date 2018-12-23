@@ -22,6 +22,7 @@
 
 <script>
 import CuadroImagenes from "./cuadroImagenes.vue";
+
 export default {
   components: { CuadroImagenes },
   data() {
@@ -34,13 +35,12 @@ export default {
           Descripcion: "Estructural y para levantamiento de paredes",
           src_imagen:
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/em4f-PRODUCTO_BLOQUE_CREP.png",
-          categoria: [
-            "Sistemas Embebidos",
-            "Ingenería",
-            "Desarrollo de Hardware",
-            "Electrónica",
-            "Programación"
-          ]
+
+          caracteristicas: {
+            Resistencia: "10 MP",
+            Dimensiones: "30x15x7 cm",
+            Colores: "Rojo y Cafe"
+          }
         },
         {
           Nombre: "LADRILLO VI",
@@ -48,26 +48,25 @@ export default {
           Descripcion: "Canaleta",
           src_imagen:
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/mLpb-PRODUCTO_BLOQUE_vi.png",
-          categoria: [
-            "Sistemas Emebebidos",
-            "Ingenería",
-            "Desarrollo de Hardware",
-            "Linux",
-            "Electrónica"
-          ]
+
+          caracteristicas: {
+            Resistencia: "10 MP",
+            Dimensiones: "30x15x7 cm",
+            Colores: "Rojo y Cafe"
+          }
         },
         {
-          Nombre: "Desarrollo Web",
+          Nombre: "ADOQUIN",
           Precio: 120,
           Descripcion: "Para el piso, con dos tipos, para peatones y vehicular",
           src_imagen:
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/aEJO-PRODUCTO_ADOQUIN.png",
-          categoria: [
-            "Desarrollo Web",
-            "Javascript",
-            "Framework Frontend",
-            "Mongodb"
-          ]
+
+          caracteristicas: {
+            Resistencia: "10 MP",
+            Dimensiones: "30x15x7 cm",
+            Colores: "Rojo y Cafe"
+          }
         }
       ]
     };

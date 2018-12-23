@@ -4,7 +4,7 @@
       width="100%"
       flat
       tile
-      color="rgb(225, 80, 0)"
+      color="rgb(210, 70, 0)"
       class="white--text text-xs-center"
     >
       <v-card-text>
@@ -42,7 +42,30 @@
           </v-layout>
         </v-container>
       </v-card-text>
-
+      <v-card-text>
+        <v-layout row>
+          <v-flex>
+            <a
+              style="text-decoration: none;"
+              class="white--text"
+              target="_blank"
+              :href="api"
+            >
+              <v-icon>phone</v-icon>
+              <h3>{{ telefono }}</h3>
+            </a>
+          </v-flex>
+          <v-flex>
+            <a
+              style="text-decoration: none;"
+              class="white--text"
+              href="mailto: ${correo}"
+              ><v-icon>mail</v-icon>
+              <h3>{{ correo }}</h3></a
+            >
+          </v-flex>
+        </v-layout></v-card-text
+      >
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
@@ -62,13 +85,17 @@ export default {
   props: ["menus"],
   data() {
     return {
+      correo: "info@ecoblock-up.com",
+      telefono: "+593992958873",
       titulo: ["EMPRESA", "PRINCIPAL"],
+      api: "https://web.whatsapp.com/send?phone=" + this.telefono,
+      otro: "google.com",
       link_empresa: [
         { ruta: "/nosotros", nombre: "Misión" },
         { ruta: "/nosotros", nombre: "Visión" }
       ],
       icons: [
-        "fab facebook-square",
+        "fab fa-facebook-square",
         "fab fa-twitter",
         "fab fa-google-plus",
         "fab fa-linkedin",

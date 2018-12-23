@@ -2,6 +2,9 @@
 #list {
   background-color: rgba(255, 255, 255, 0.95);
 }
+.v-list {
+  background-color: rgba(255, 255, 255, 0);
+}
 </style>
 
 <template>
@@ -16,7 +19,21 @@
       v-model="drawer_flag"
       right
     >
-      <List :items="menus" @epath="nombreRuta($event);"></List>
+      <List
+        :items="menus"
+        @epath="nombreRuta($event);"
+        :clases="[border_class]"
+      >
+        <v-list-tile
+          slot="listName"
+          slot-scope="{
+            data
+          }"
+          class="font-weight-bolder"
+        >
+          <h3>{{ data.nombre }}</h3>
+        </v-list-tile>
+      </List>
       <v-btn
         fixed
         bottom
@@ -87,6 +104,7 @@ export default {
   },
   data() {
     return {
+      border_class: "border_hover",
       src_logo:
         "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/meF6-EBU_lOGO_BLOQUE.png",
       offsetTop: 0,
