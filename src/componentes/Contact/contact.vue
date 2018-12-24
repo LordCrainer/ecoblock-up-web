@@ -7,7 +7,6 @@ https://www.w3.org/TR/html/sec-forms.html#email-state-typeemail <style></style>
       <slot></slot> <contactoForm></contactoForm> </v-layout
   ></v-container>
 </template>
-
 <script>
 import contactoForm from "./contacto_form.vue";
 //Expresión Regular

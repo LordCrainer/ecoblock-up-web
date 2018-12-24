@@ -57,7 +57,7 @@
             <a
               style="text-decoration: none;"
               class="white--text"
-              href="mailto: ${correo}"
+              :href="'mailto:' + correo + '?subject=INFORMACION&body='"
               ><v-btn icon><v-icon large>mail</v-icon></v-btn>
               <h3>{{ correo }}</h3></a
             >
@@ -80,11 +80,13 @@
 </template>
 <script>
 export default {
+  //correo + '?subject=Email%20Subject&body=Email%20Body%20Text'
   props: ["menus"],
   data() {
     return {
       correo: "info@ecoblock-up.com",
       telefono: "+593992958873",
+      comentario: "Este es una prueba",
       titulo: ["EMPRESA", "PRINCIPAL"],
       api: "https://web.whatsapp.com/send?phone=" + this.telefono,
       otro: "google.com",
@@ -104,6 +106,9 @@ export default {
     };
   },
   methods: {
+    remplazar_texto(texto) {
+      return texto.replace(/ /g, "%20");
+    },
     copyTestingCode() {
       let testingCodeToCopy = document.querySelector("#telefono_copy");
       testingCodeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
