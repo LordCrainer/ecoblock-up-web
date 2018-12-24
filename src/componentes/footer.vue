@@ -69,9 +69,10 @@
       <v-card-text class="white--text">
         &copy;2018 —
         <a
+          target="blank"
           style="text-decoration: none;"
           class="white--text"
-          href="adcaplus.com"
+          href="https://bit.ly/adcaplus"
           ><strong>ADCAPLUS</strong></a
         >
       </v-card-text>
