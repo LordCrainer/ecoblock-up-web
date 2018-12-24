@@ -1,7 +1,7 @@
 {
   "name": "ecoblock-up",
   "version": "1.0.0",
-  "description": "Página para los ladrillos",
+  "description": "Página para los ladrillos fork-actual",
   "main": "src/main.js",
   "private": true,
   "scripts": {
