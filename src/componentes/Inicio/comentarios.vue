@@ -24,7 +24,11 @@ export default {
           text: ""
         },
         {
-          titulo: "",
+          titulo: "Ladrillos ecológicos y económicos",
+          text: ""
+        },
+        {
+          titulo: "Ladrillo de la diferencia",
           text: ""
         }
       ]

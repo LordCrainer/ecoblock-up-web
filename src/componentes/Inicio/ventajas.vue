@@ -102,16 +102,16 @@ export default {
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/fTTn-resistente.png"
         },
         {
-          titulo: "PRECIO ECONOMICO",
-          text: "Promovemos constantemente el autoaprendizaje en todo momento",
-          src_avatar: "https://image.flaticon.com/icons/png/512/595/595924.png"
-        },
-        {
           titulo: "ECOLOGICO",
           text:
             "Usamos diferentes herramientas para que el desarrollo de las clases y la comunicación se logre de manera efectiva",
           src_avatar:
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/f5vf-Earth_eco_ecology_globe_planet_protect-512.png"
+        },
+        {
+          titulo: "PRECIO ECONOMICO",
+          text: "Promovemos constantemente el autoaprendizaje en todo momento",
+          src_avatar: "https://image.flaticon.com/icons/png/512/595/595924.png"
         },
         {
           titulo: "MODULAR",
@@ -121,10 +121,11 @@ export default {
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/6jjs-building_blocks_toy_lego_construction_cube-512.png"
         },
         {
-          titulo: "NO NECESITA HORNOS",
+          titulo: "SIN EMITIR CO2",
           text:
             "Crea tus propias cuentas de correo usando tu dominio de manera sumamente sencilla",
-          src_avatar: "https://image.flaticon.com/icons/png/512/421/421633.png"
+          src_avatar:
+            "https://emobi.com.co/wp-content/uploads/2017/12/No-al-Co2.png"
         }
       ]
     };

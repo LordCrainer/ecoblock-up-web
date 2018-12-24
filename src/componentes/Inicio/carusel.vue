@@ -1,7 +1,7 @@
 <style>
 .v-carousel__next button,
 .v-carousel__prev button {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 .v-carousel__controls .v-item-group .v-btn--active .v-btn__content i {
   border-radius: 50%;
