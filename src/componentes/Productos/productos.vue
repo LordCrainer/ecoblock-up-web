@@ -3,8 +3,8 @@
     <v-flex>
       <v-card>
         <v-container>
-          <v-layout>
-            <v-flex xs6 right>
+          <v-layout wrap>
+            <v-flex xs8 right>
               <v-text-field
                 prepend-icon="search"
                 label="Buscar producto"
@@ -63,7 +63,7 @@ export default {
             "https://uploads.codesandbox.io/uploads/user/17fffd86-3ee1-4ca9-abc0-4e76a2cb57f0/aEJO-PRODUCTO_ADOQUIN.png",
 
           caracteristicas: {
-            Resistencia: "10 MP",
+            Resistencia: "27 MP",
             Dimensiones: "30x15x7 cm",
             Colores: "Rojo y Cafe"
           }
